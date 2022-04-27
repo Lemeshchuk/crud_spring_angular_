@@ -1,0 +1,8 @@
+[{
+  "roleName": "user",
+  "defaultPage": "/user"
+},
+  {
+    "roleName": "admin",
+    "defaultPage": "/admin"
+  }]

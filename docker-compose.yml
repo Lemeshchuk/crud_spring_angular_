@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  db:
+    image: nkonev/h2
+    container_name: h2new
+    hostname: h2-database
+    ports:
+      - "8082:8082"
+    volumes:
+      - ./server/src/main/resources/init_script.sql:/docker-entrypoint-initdb.d/init_script.sql
+    restart: always
+
+  backend:
+    container_name: server2
+    build:
+      context: server
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    links:
+      - db
+  
+  frontend:
+    container_name: angularUI
+    build:
+      context: ./angularUI
+      dockerfile: ./Dockerfile
+    ports:
+      - "4200:4200"
+    links:
+      - backend

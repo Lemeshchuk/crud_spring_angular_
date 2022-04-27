@@ -1,0 +1,5 @@
+<dataset>
+    <role role_id="1" name='admin'/>
+    <usr role_id="1" username="myLogin" password="$2a$08$zowEheaV4hai1laao8h7..eOc4aKo4zKYfL8yJFDsOr8ENLFfJoyy" email="updatedEmail@gmail.com" firstname="login" lastname="login" birthday="2000-06-20"/>
+    <usr role_id="1" username="Moderator" password="1234" email="email2@gmail.com" firstname="FirstName2" lastname="LastName2" birthday="2015-01-01"/>
+</dataset>
